@@ -82,7 +82,7 @@ namespace UnitTests
                         Console.WriteLine("\t\tPAPX modifier:");
                         foreach (var sprm in std.papx.grpprl)
                         {
-                            Console.WriteLine(string.Format("\t\tSPRM: modifies " + sprm.Type + " property 0x{0:x4} (" + sprm.Arguments.Length + " bytes)", sprm.OpCode));
+                            Console.WriteLine("\t\tSPRM: modifies " + sprm.Type + " property " + sprm.OpCode + "(" + sprm.Arguments.Length + " bytes)");
                         }
                     }
 
@@ -91,10 +91,9 @@ namespace UnitTests
                         Console.WriteLine("\t\tCHPX modifier:");
                         foreach (var sprm in std.chpx.grpprl)
                         {
-                            Console.WriteLine(string.Format("\t\tSPRM: modifies " + sprm.Type + " property 0x{0:x4} (" + sprm.Arguments.Length + " bytes)", sprm.OpCode));
+                            Console.WriteLine("\t\tSPRM: modifies " + sprm.Type + " property " + sprm.OpCode + " (" + sprm.Arguments.Length + " bytes)");
                         }
                     }
-
                 }
                 else
                 {
