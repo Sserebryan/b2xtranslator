@@ -2,13 +2,14 @@ using b2xtranslator.DocFileFormat;
 using b2xtranslator.StructuredStorage.Reader;
 using NUnit.Framework;
 using System;
+using System.IO;
 
 namespace UnitTests
 {
     [TestFixture]
     public class DocFileFormat
     {
-        string file = @"files\simple.doc";
+        string file = Path.Combine("files", "simple.doc");
         StructuredStorageReader reader;
         WordDocument doc;
 
