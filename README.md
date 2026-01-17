@@ -3,7 +3,14 @@
 .NET Core library to convert Microsoft Office binary files (`doc`, `xls` and `ppt`) to Open XML (`docx`, `xlsx` and `pptx`).
 You can use the [Open XML SDK](https://github.com/OfficeDev/Open-XML-SDK) to mainpulate those.
 
-Forked from a [.NET 2 Mono implementation](https://sourceforge.net/projects/b2xtranslator/) under the BSD license. 
+Forked from a [.NET 2 Mono implementation](https://sourceforge.net/projects/b2xtranslator/) under the BSD license.
+
+## NuGet Packages
+
+- [b2xtranslator](https://www.nuget.org/packages/b2xtranslator/) - Core library
+- [b2xtranslator.doc](https://www.nuget.org/packages/b2xtranslator.doc/) - Word document conversion
+
+## Resources
 
 * [Microsoft Office binary files documentation](https://msdn.microsoft.com/en-us/library/cc313105.aspx)
 * [Open XML Standard](http://www.ecma-international.org/publications/standards/Ecma-376.htm)
