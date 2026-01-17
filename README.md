@@ -17,5 +17,6 @@ Forked from a [.NET 2 Mono implementation](https://sourceforge.net/projects/b2xt
 * [Microsoft article on this implementation](https://blogs.msdn.microsoft.com/interoperability/2009/05/11/binary-to-open-xml-b2x-translator-interoperability-for-the-office-binary-file-formats/)
 * [.NET 2 Mono implementation architecture](http://b2xtranslator.sourceforge.net/architecture.html)
 
-All code retained from that version ©2009 DI<sup><u>a</u></sup>LOGIK<sup><u>a</u></sup> http://www.dialogika.de/  
+All code retained from that version ©2009 DI<sup><u>a</u></sup>LOGIK<sup><u>a</u></sup> http://www.dialogika.de/
 .NET core port work and move to `System.IO.Compression` ©2017 Evolution https://www.evolutionjobs.com/
+NuGet packages and maintenance ©2025 Alexander Simakhin
