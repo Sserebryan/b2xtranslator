@@ -1,9 +1,17 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.0</TargetFramework>
-    <AssemblyOriginatorKeyFile>..\..\key.snk</AssemblyOriginatorKeyFile>
+    <TargetFramework>net10.0</TargetFramework>
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(OS)' == 'Windows_NT'">
+    <DefineConstants>$(DefineConstants);WINDOWS</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup Condition="'$(OS)' == 'Windows_NT'">
+    <Reference Include="Microsoft.Office.Interop.Word">
+      <HintPath>Microsoft.Office.Interop.Word.dll</HintPath>
+    </Reference>
+  </ItemGroup>
   <ItemGroup>
     <None Remove="Config.xml" />
     <None Remove="files\simple.xls" />
@@ -18,22 +26,22 @@
     <Content Include="files\simple.docx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="files\simple.xls" />
+    <Content Include="files\simple.xls">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.3.0" />
-    <PackageReference Include="NUnit" Version="3.8.1" />
-    <PackageReference Include="NUnit.Console" Version="3.7.0" />
-    <PackageReference Include="NUnit3TestAdapter" Version="3.8.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.9.0" />
+    <PackageReference Include="NUnit" Version="4.1.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="4.5.0" />
+    <PackageReference Include="NUnit.Analyzers" Version="4.0.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Shell\doc2x\doc2x.csproj" />
-    <ProjectReference Include="..\Shell\ppt2x\ppt2x.csproj" />
-    <ProjectReference Include="..\Shell\xls2x\xls2x.csproj" />
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="Microsoft.Office.Interop.Word">
-      <HintPath>Microsoft.Office.Interop.Word.dll</HintPath>
-    </Reference>
+    <ProjectReference Include="..\Doc\b2xtranslator.doc.csproj" />
+    <ProjectReference Include="..\Ppt\b2xtranslator.ppt.csproj" />
+    <ProjectReference Include="..\Xls\b2xtranslator.xls.csproj" />
   </ItemGroup>
 </Project>

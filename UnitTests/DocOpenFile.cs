@@ -1,3 +1,4 @@
+#if WINDOWS
 using b2xtranslator.DocFileFormat;
 using b2xtranslator.OpenXmlLib.WordprocessingML;
 using b2xtranslator.StructuredStorage.Reader;
@@ -14,6 +15,8 @@ using static b2xtranslator.OpenXmlLib.OpenXmlPackage;
 namespace UnitTests
 {
     [TestFixture]
+    [Platform("Win")]
+    [Explicit("Requires Microsoft Word installed")]
     public class DocOpenFile
     {
         Application word2007 = null;
@@ -129,7 +132,7 @@ namespace UnitTests
 
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void CharactersTest()
         {
@@ -300,3 +303,4 @@ namespace UnitTests
         }
     }
 }
+#endif
